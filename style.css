@@ -1,0 +1,189 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+    background-color:rgb(33, 31, 36);
+    display: flex;
+    align-items: center;
+}
+.container__calc{
+    width: 650px;
+    margin: 0 auto;
+}
+.calc__title{
+    color: #fff;
+}
+.calc__input-1{
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 0;
+}
+.calc__input-2{
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0;
+}
+.calc__inputs{
+    display: flex;
+    flex-direction: column;
+}
+.calc__buttons{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 10px;
+}
+.calc__btn-1{
+    width: 47%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 0;
+    background-color: rgb(3, 110, 3);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.calc__btn-1:hover{
+    background-color: rgb(4, 145, 4);
+}
+.calc__btn-2{
+    width: 47%;
+   padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(181, 1, 1);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.calc__btn-2:hover{
+    background-color: rgb(236, 4, 4);
+}
+.calc__btn-3{
+  width: 47%;
+ padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(23, 23, 224);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.calc__btn-3:hover{
+  background-color: rgb(4, 33, 147);
+}
+.calc__btn-4{
+  width: 47%;
+ padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  background-color: rgb(166, 19, 156);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.calc__btn-4:hover{
+  background-color: rgb(244, 61, 186);
+}
+.btn__calculation{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:rgb(33, 31, 36);
+    border: 1px solid rgb(6, 207, 242);
+    color: rgb(6, 207, 242);
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+.btn__calculation:hover{
+    background-color:rgb(18, 67, 78);
+}
+.calc__result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 2px;
+
+}
